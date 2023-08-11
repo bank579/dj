@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('pay.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    .snow{
+        color: rgb(60, 255, 0);
+    }
+    .okay{
+        color: rgb(98, 0, 255);
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="snow">WELCOME TO DEE JOKER BANK LOGS COMPANY</h1>
+        <h2 class="okay">WE OFFER YOU THE BEST BANK LOGS ON OUR SITE.</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Enter Email To Receive Log Details:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" id="login-btn">SHOP NOW</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const email = document.getElementById('email').value;
+
+        
+            if ( !email ) {
+                alert('Please fill in all details before logging in.');
+            } else {
+                // You can redirect the user to another page after successful login.
+                window.location.href = "inde.html";
+            }
+        });
+    </script>
+</body>
+</html>
